@@ -1,10 +1,3 @@
-Ah, sip! Jadi kamu ingin dibuatkan file `README.md` untuk dokumentasi dari notebook **`abstractive_summarization_with_bart.ipynb`**.
-
-Berikut adalah contoh `README.md` dalam **Bahasa Indonesia**, ditujukan untuk publikasi proyek **Abstractive Text Summarization menggunakan BART** di GitHub:
-
----
-
-```markdown
 # 🧠 Abstractive Text Summarization dengan BART (Transformers)
 
 Proyek ini merupakan implementasi model **abstractive summarization** menggunakan arsitektur transformer **BART** (Bidirectional and Auto-Regressive Transformers) dari HuggingFace Transformers. Model ini digunakan untuk menghasilkan ringkasan otomatis dari teks panjang, layaknya cara manusia merangkum dengan kalimat baru (bukan sekadar menyalin potongan kalimat asli).
