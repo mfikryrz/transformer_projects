@@ -1,0 +1,8 @@
+tensorflow
+tensorflow-text
+keras
+keras-nlp
+keras-hub
+pandas
+py7zr
+requests
