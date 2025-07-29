@@ -1,86 +1,52 @@
-# 🧠 Abstractive Text Summarization dengan BART (Transformers)
+## 📘 Project 1: Indonesian-to-English Machine Translation using Keras Hub
 
-Proyek ini merupakan implementasi model **abstractive summarization** menggunakan arsitektur transformer **BART** (Bidirectional and Auto-Regressive Transformers) dari HuggingFace Transformers. Model ini digunakan untuk menghasilkan ringkasan otomatis dari teks panjang, layaknya cara manusia merangkum dengan kalimat baru (bukan sekadar menyalin potongan kalimat asli).
+### Overview
 
----
+This project implements a simple Transformer-based **Indonesian-to-English** machine translation system using components from [Keras Hub](https://keras.io/hub/). It covers the full pipeline from tokenization and vocabulary generation to model training, evaluation, and greedy decoding.
 
-## 📌 Tujuan Proyek
+### Features
 
-- Mengaplikasikan model **BART** pre-trained (`facebook/bart-large-cnn`) untuk tugas **abstractive summarization**.
-- Menerapkan pipeline HuggingFace untuk menyederhanakan inferensi summarization.
-- Menjalankan proses pada teks sample secara efisien.
-- Menyediakan hasil ringkasan yang alami dan kontekstual.
+* Custom tokenizer training using WordPiece
+* Sequence-to-sequence Transformer architecture with encoder-decoder design
+* Special token handling (`[START]`, `[END]`, `[PAD]`)
+* Causal masking and padding masking support
+* Greedy decoding for inference
 
----
+### Requirements
 
-## 🚀 Teknologi yang Digunakan
+> ⚠️ **Note**: You do not need to manually install the `requirements.txt` dependencies if you're using the notebook in Google Colab.
+> All necessary libraries are installed within the code cells.
+> The `requirements.txt` file simply lists the libraries used for reference or local setup.
 
-- Python 3
-- [Transformers by HuggingFace](https://huggingface.co/transformers/)
-- BART (`facebook/bart-large-cnn`)
-- Google Colab / Jupyter Notebook
+If you wish to set it up locally:
 
----
-
-## 📝 Cara Menjalankan
-
-1. Pastikan Python environment kamu sudah terinstall:
-
-   ```bash
-   pip install transformers
-   ```
-
-2. Jalankan notebook:
-
-   ```bash
-   jupyter notebook abstractive_summarization_with_bart.ipynb
-   ```
-
-3. Ubah input teks panjang pada cell yang sesuai untuk melakukan ringkasan.
-
----
-
-## 📖 Contoh Input & Output
-
-**Input Teks:**
-
-```
-Indonesia adalah negara kepulauan terbesar di dunia yang terdiri dari lebih dari 17.000 pulau dan memiliki populasi lebih dari 270 juta jiwa. Negara ini memiliki keberagaman budaya, bahasa, dan agama yang luar biasa...
-```
-
-**Hasil Ringkasan:**
-
-```
-Indonesia adalah negara kepulauan besar dengan populasi lebih dari 270 juta jiwa dan keberagaman budaya yang tinggi.
+```bash
+pip install -r requirements.txt
 ```
 
 ---
 
-## ⚠️ Catatan
+## 📘 Project 2: Abstractive Summarization with BART
 
-- Model `facebook/bart-large-cnn` dilatih untuk teks berbahasa Inggris. Jika ingin digunakan untuk Bahasa Indonesia, disarankan untuk:
-  - Melakukan fine-tuning pada dataset berbahasa Indonesia.
-  - Atau gunakan model pretrained yang memang dilatih untuk Bahasa Indonesia, seperti IndoBART.
+### Overview
 
----
+This notebook demonstrates **abstractive text summarization** using a pre-trained [BART](https://huggingface.co/facebook/bart-large-cnn) model from Hugging Face Transformers. It leverages transfer learning to summarize long text into concise summaries.
 
-## 📂 Struktur File
+### Features
 
+* Uses `facebook/bart-large-cnn` via 🤗 Transformers
+* Tokenizes and truncates long input documents
+* Applies maximum length and beam search during generation
+* Performs inference using GPU (if available)
+
+### Requirements
+
+> ⚠️ **Note**: You don’t need to run `requirements.txt` when using this notebook in Colab.
+> The required packages are already installed via code cells. The `requirements.txt` file is provided just for clarity and optional local use.
+
+To install dependencies manually (e.g., in a local environment):
+
+```bash
+pip install -r requirements.txt
 ```
-📁 proyek/
-│
-├── abstractive_summarization_with_bart.ipynb   # Notebook utama
-├── README.md                                   # Dokumentasi ini
-```
 
----
-
-## 🤝 Kontribusi
-
-Ingin menambahkan model lain seperti T5, Pegasus, atau fine-tuning model Indonesia? Silakan buat pull request atau diskusi melalui issues!
-
----
-
-## 📄 Lisensi
-
-Proyek ini open-source dengan lisensi MIT. Bebas digunakan untuk pembelajaran atau penelitian.
